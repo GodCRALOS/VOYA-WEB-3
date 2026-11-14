@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organiza tus destinos y planes de viaje con VOYA.">
+  <title>VOYA — Mi itinerario</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<header class="header"><div class="header__container">
+  <a class="header__brand" href="../index.html"><span class="brand-mark" aria-hidden="true">✈</span><span>VOYA</span></a>
+  <nav class="nav" aria-label="Navegación principal"><ul class="nav__list">
+    <li><a class="nav__link" href="../index.html">Inicio</a></li>
+    <li><a class="nav__link" href="explorar.html">Explorar</a></li>
+    <li><a class="nav__link" href="ofertas.html">Ofertas</a></li>
+    <li><a class="nav__link" href="favoritos.html">Favoritos</a></li>
+    <li><a class="nav__link active" href="itinerario.html">Itinerario</a></li>
+    <li><a class="nav__link" href="soporte.html">Soporte</a></li>
+  </ul></nav>
+  <div class="header__actions"><a class="btn btn--pill btn--primary" href="login.html">Iniciar sesión</a></div>
+</div></header>
+<main>
+  <section class="page-hero"><div class="container"><span class="eyebrow">Organiza tus ideas</span><h1>Mi itinerario de viaje</h1><p>Guarda destinos y crea planes sencillos para organizar tu próxima aventura.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="section-heading"><span class="eyebrow">Destinos seleccionados</span><h2>Tu lista de lugares</h2><p>Los destinos que agregues desde su ficha aparecerán aquí.</p></div>
+    <div class="grid grid--3" id="itinerary-list"></div>
+    <div class="empty-state" id="itinerary-empty"><div class="empty-state__icon">📍</div><h2 style="font-size:1.4rem">Aún no tienes destinos</h2><p>Explora los países y usa «Añadir al itinerario» para guardarlos aquí.</p><a class="btn btn--primary btn--pill" href="explorar.html">Explorar destinos</a></div>
+  </div></section>
+  <section class="section section--cream"><div class="container"><div class="form-panel">
+    <span class="eyebrow">Plan de viaje</span><h2>Crear un nuevo plan</h2><p>Los planes se guardan localmente en este navegador.</p>
+    <form id="trip-form">
+      <div class="form-group"><label for="trip-name">Nombre del viaje</label><input class="form-control" id="trip-name" name="name" required maxlength="70" placeholder="Ej. Vacaciones de diciembre"></div>
+      <div class="form-group"><label for="trip-destination">Destino</label><input class="form-control" id="trip-destination" name="destination" required placeholder="Ej. Madrid, España"></div>
+      <div class="grid grid--3">
+        <div class="form-group"><label for="trip-start">Fecha de inicio</label><input class="form-control" type="date" id="trip-start" name="start" required></div>
+        <div class="form-group"><label for="trip-end">Fecha de finalización</label><input class="form-control" type="date" id="trip-end" name="end" required></div>
+        <div class="form-group"><label for="trip-travelers">Número de viajeros</label><input class="form-control" type="number" id="trip-travelers" name="travelers" min="1" max="50" value="1" required></div>
+      </div>
+      <div class="form-group"><label for="trip-budget">Presupuesto estimado (COP)</label><input class="form-control" type="number" id="trip-budget" name="budget" min="0" step="1000" placeholder="Ej. 1500000"></div>
+      <div class="form-group"><label for="trip-notes">Comentarios</label><textarea class="form-control" id="trip-notes" name="notes" maxlength="500" placeholder="Anota actividades o ideas para tu viaje"></textarea></div>
+      <button class="btn btn--primary btn--pill" type="submit">Guardar plan</button>
+      <p id="trip-feedback" class="notice" role="status" aria-live="polite"></p>
+    </form>
+  </div><div style="margin-top:28px"><h2>Planes guardados</h2><div id="saved-plans" class="grid grid--2"></div></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__grid">
+  <div><a class="header__brand" href="../index.html"><span class="brand-mark">✈</span><span style="color:#fff">VOYA</span></a><p style="margin-top:16px">Si hay un destino, VOYA encuentra el camino.</p></div>
+  <div><h3>Explora VOYA</h3><ul class="footer__links"><li><a href="explorar.html">Destinos turísticos</a></li><li><a href="favoritos.html">Tus favoritos</a></li><li><a href="itinerario.html">Mi itinerario</a></li></ul></div>
+  <div><h3>Estamos para ayudarte</h3><ul class="footer__links"><li><a href="soporte.html">Centro de soporte</a></li><li>Correo: contacto@voya.co</li></ul></div>
+</div><div class="footer__bottom"><span>© 2026 VOYA · Proyecto académico</span><span>Innovación · Tecnología · Soluciones</span></div></div></footer>
+<script type="module" src="../js/itinerario.js"></script>
+</body></html>
